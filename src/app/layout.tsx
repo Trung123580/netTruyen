@@ -2,7 +2,12 @@ import React from 'react'
 import type {Metadata} from 'next'
 import {Roboto} from 'next/font/google'
 import './globals.scss'
-import NextUIContextProvider from '@/layout/NextUIContextProvider'
+import AuthContext from '@/context/AuthContext'
+import ProviderRedux from '@/context/ProviderRedux'
+import NextUIContextProvider from '@/context/NextUIContextProvider'
+import Header from '@/layout/Header'
+import Footer from '@/layout/Footer'
+import Sidebar from '@/layout/Sidebar'
 
 const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700', '900'],
@@ -42,9 +47,16 @@ export default function RootLayout({children}: Readonly<{
   return (
     <html lang="en">
     <body className={`${roboto.variable} font-roboto antialiased`}>
-    <NextUIContextProvider>
-      {children}
-    </NextUIContextProvider>
+    <ProviderRedux>
+      <AuthContext>
+        <NextUIContextProvider>
+          <Header/>
+          <Sidebar/>
+          {children}
+          <Footer/>
+        </NextUIContextProvider>
+      </AuthContext>
+    </ProviderRedux>
     </body>
     </html>
   )
