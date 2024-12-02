@@ -16,7 +16,6 @@ export default {
         // background: "var(--background)",
         // foreground: "var(--foreground)",
         ...defaultTheme.colors,
-        primary:'#e4d804'
       },
       fontFamily: {
         roboto: 'var(--font-roboto)'
@@ -47,13 +46,15 @@ export default {
       dark:{
         colors: {
           foreground:'white', // background-color
-          background:'black' // background-color
+          background:'black', // background-color
+          primary:'#e4d804',
         },
       },
       light:{
         colors: {
           // foreground:'red', // text-color
           // background:'blue' // background-color
+          primary:'rgba(255, 0, 0, 0.88)',
         }
       }
     }

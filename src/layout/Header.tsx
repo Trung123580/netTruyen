@@ -5,7 +5,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, Navba
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const menuItems = ["Features", "Customers", "Integrations", "Log Out"]
+  const menuItems = ["Features", "Customers", "Integrations", "LogOut"]
 
   return (
     <>
