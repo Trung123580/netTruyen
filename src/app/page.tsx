@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div>
       <SwModeTheme/>
-      <Button color="danger" aria-label="Like">
+      {/* <Button color="danger" aria-label="Like">
         Button
       </Button>
       <Button
@@ -15,7 +15,7 @@ export default function App() {
         size="md"
       >
         Press me
-      </Button>
+      </Button> */}
 
     </div>
   )

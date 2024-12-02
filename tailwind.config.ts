@@ -5,6 +5,7 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/layout/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
@@ -14,6 +15,8 @@ export default {
       colors: {
         // background: "var(--background)",
         // foreground: "var(--foreground)",
+        ...defaultTheme.colors,
+        primary:'#e4d804'
       },
       fontFamily: {
         roboto: 'var(--font-roboto)'
@@ -43,8 +46,8 @@ export default {
     themes:{
       dark:{
         colors: {
-          // foreground:'red', // text-color
-          // background:'blue' // background-color
+          foreground:'white', // background-color
+          background:'black' // background-color
         },
       },
       light:{
