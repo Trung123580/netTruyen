@@ -1,11 +1,9 @@
 'use client'
-import {Button} from '@nextui-org/button'
-import {SwModeTheme} from '@/components/SwModeTheme'
 
 export default function App() {
   return (
     <div>
-      <SwModeTheme/>
+      main
       {/* <Button color="danger" aria-label="Like">
         Button
       </Button>
@@ -16,7 +14,6 @@ export default function App() {
       >
         Press me
       </Button> */}
-
     </div>
   )
 }

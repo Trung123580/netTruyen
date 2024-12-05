@@ -1,14 +1,19 @@
 import React from 'react'
 import type {Metadata} from 'next'
 import {Roboto} from 'next/font/google'
-import './globals.scss'
 import AuthContext from '@/context/AuthContext'
 import ProviderRedux from '@/context/ProviderRedux'
 import NextUIContextProvider from '@/context/NextUIContextProvider'
 import Header from '@/layout/Header'
 import Footer from '@/layout/Footer'
 import Sidebar from '@/layout/Sidebar'
-
+import Banner from '@/layout/Banner'
+import './globals.scss'
+import 'swiper/css'
+import 'swiper/css/effect-cards'
+// import "swiper/css/effect-fade"
+// import "swiper/css/effect-coverflow"
+// import "swiper/css/navigation"
 const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700', '900'],
   subsets: ['latin'],
@@ -51,6 +56,7 @@ export default function RootLayout({children}: Readonly<{
       <AuthContext>
         <NextUIContextProvider>
           <Header/>
+          <Banner/>
           <Sidebar/>
           {children}
           <Footer/>
